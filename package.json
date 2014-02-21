@@ -1,0 +1,24 @@
+{
+  "name": "CollaborativeDrawing",
+  "version": "0.0.0",
+  "description": "Basic Node.js app to show the functionalities of Node",
+  "main": "server.js",
+  "dependencies": {
+    "socket.io": "~0.9.16",
+    "express": "~3.4.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "collaborativedrawing"
+  ],
+  "author": "Adolfo Ochagavía",
+  "license": "None"
+}

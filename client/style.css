@@ -1,0 +1,40 @@
+.title
+{
+
+}
+
+.main
+{
+    width: 800px;
+}
+
+.login
+{
+
+}
+
+canvas#draw-canvas {
+	border-style:solid;
+	border-width:1px;
+	border-color:black;
+	float:left;
+}
+
+.chat-container {
+    width: 280px;
+    float:left;
+}
+
+#message-container
+{
+    height: 250px;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: lightgray;
+}
+
+#chat-input
+{
+    width: 98%;
+}
