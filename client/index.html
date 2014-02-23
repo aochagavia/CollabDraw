@@ -9,8 +9,16 @@
 
     <script src="canvas.js"></script>
     <script src="app.js"></script>
+    <script>
+    var checkBrowser = function() {
+      var isChrome = window.chrome;
+      var isIE11 = !!(navigator.userAgent.match(/Trident/) && !navigator.userAgent.match(/MSIE/));
+      if (!isChrome && !isIE11)
+        alert('This application has only been tested with Google Chrome and Internet Explorer 11. It is possible that you are unable to draw if you are using another browser.');
+    }
+    </script>
   </head>
-  <body>
+  <body onload="checkBrowser()">
     <div class="title">
       <h1>CollaborativeDrawing - A basic Node.js application</h1>
     </div>
