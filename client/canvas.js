@@ -65,8 +65,10 @@ var MakeDrawCanvas = function() {
         }
     });
 
-    $(canvas).mousedown(function(evt) {
-        currentLine = MakeLine(evt.offsetX, evt.offsetY, canvas.getContext('2d'));
+    $(canvas).mousedown(function(e) {
+        var offsetX = (e.offsetX || e.clientX - $(e.target).offset().left + window.pageXOffset );
+        var offsetY = (e.offsetY || e.clientY - $(e.target).offset().top + window.pageYOffset );
+        currentLine = MakeLine(offsetX, offsetY, canvas.getContext('2d'));
         mouseDown = true;
     });
 
