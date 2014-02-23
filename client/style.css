@@ -1,19 +1,57 @@
+body {
+    width:800px;
+    margin:0 auto;
+}
+
 .title
 {
-
+    color: #900;
+    text-align: center;
 }
 
 .main
 {
-    width: 800px;
+    
 }
 
-.login
-{
+.main > div {
+    background-color: #01A9DB;
+    border: 2px solid;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 15px;
+}
 
+#login
+{
+    width: 400px;
+    height: 200px;
+}
+
+#login input {
+    padding-left:3px;
+    height: 20px;
+    width: 100px;
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+#login button {
+    width: 65px;
+}
+
+#login .inner {
+    width: 180px;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+#application {
+    border: 1px solid;
 }
 
 canvas#draw-canvas {
+    background-color: white;
 	border-style:solid;
 	border-width:1px;
 	border-color:black;
@@ -21,20 +59,37 @@ canvas#draw-canvas {
 }
 
 .chat-container {
-    width: 280px;
+    margin-left: 10px;
+    width: 250px;
     float:left;
 }
 
 #message-container
 {
-    height: 250px;
+    border: 1px solid;
+    height: 438px;
+    padding: 5px;
+    margin-bottom:4px;
     word-wrap: break-word;
     overflow-x: hidden;
     overflow-y: scroll;
-    background-color: lightgray;
+    background-color: white;
 }
 
 #chat-input
 {
-    width: 98%;
+    border: 1px solid black;
+    height: 20px;
+    width: 248px;
+}
+
+.chat-container > button {
+    margin: 0;
+    margin-top: 4px;
+    padding: 0;
+    width: 49%;
+}
+
+.clearfloat {
+    clear: both;
 }

@@ -3,7 +3,7 @@
   <head>
     <title>CollaborativeDraw</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="/socket.io/socket.io.js"></script>
     <script src="jquery.js"></script>
 
@@ -12,19 +12,19 @@
   </head>
   <body>
     <div class="title">
-      <p>
-        <strong>CollaborativeDraw - A basic application written in JavaScript, using Node.js and Angular.js</strong>
-      </p>
+      <h1>CollaborativeDraw - A basic Node.js application</h1>
     </div>
     <div class="main">
       <div id="login">
-        <form onsubmit="event.preventDefault(); app.login($('#username').val());">
-          <input type="text" placeholder="Username" id="username" required />
-          <button>Log in!</button>
-        </form>
+        <div class="inner">
+          <form onsubmit="event.preventDefault(); app.login($('#username').val());">
+            <input type="text" placeholder="Username" id="username" required />
+            <button>Log in!</button>
+          </form>
+        </div>
       </div>
 
-      <div id="application">
+      <div id="application" style="display:none">
         <canvas id="draw-canvas">
           <script>
             MakeDrawCanvas();
@@ -34,7 +34,7 @@
           <div id="message-container">
             <script>
               app.on('receive:message', function(data) {
-                  $('#message-container').append('<p><strong>' + data.author + '</strong>: ' + data.content + '</p>');
+                  $('#message-container').prepend('<div class="message"><strong>' + data.author + '</strong>: ' + data.content + '</div>');
               });
             </script>
           </div>
@@ -43,8 +43,10 @@
             <input type="text" id="chat-input" />
             </form>
           </div>
-          a
+          <button onclick="app.clearLines()">Clear Drawing</button>
+          <button onclick="app.logout()">Log out</button>
         </div>
+        <div class="clearfloat">&nbsp;</div>
       </div>
     </div>
   </body>

@@ -91,5 +91,9 @@ var MakeDrawCanvas = function() {
                 drawLine(data.lines[i], canvas.getContext('2d'));
     });
 
+    app.on('deleted:lines', function() {
+        canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+    });
+
     return that;
 };
