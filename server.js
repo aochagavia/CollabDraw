@@ -9,7 +9,7 @@ app.configure(function() {
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 
-server.listen(80);
+server.listen(process.env.port || 80);
 
 var lines = [];
 io.sockets.on('connection', function(socket) {
