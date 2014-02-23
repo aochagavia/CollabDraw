@@ -9,8 +9,7 @@ app.configure(function() {
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 
-server.listen(3000);
-console.log('Server listening on port 3000');
+server.listen(80);
 
 var lines = [];
 io.sockets.on('connection', function(socket) {
@@ -41,5 +40,3 @@ io.sockets.on('connection', function(socket) {
         socket.broadcast.emit('receive:message', { author: 'Server', content: socket.data.username + ' has logged out' });
     });
 });
-
-console.log(lines);
