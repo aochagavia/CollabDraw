@@ -53,7 +53,9 @@ var MakeDrawCanvas = function() {
 
     window.addEventListener('mouseup', function() {
         mouseDown = false;
-        app.sendLine(currentLine);
+        if (currentLine)
+            app.sendLine(currentLine);
+        currentLine = null;
     });
 
     $(canvas).mousemove(function(evt) {
