@@ -9,11 +9,6 @@ body {
     text-align: center;
 }
 
-.main
-{
-    
-}
-
 .main > div {
     background-color: #01A9DB;
     border: 2px solid;
@@ -92,4 +87,11 @@ canvas#draw-canvas {
 
 .clearfloat {
     clear: both;
+}
+
+.linkUU {
+    margin-top: 20px;
+    font-style: italic;
+    color: gray;
+    text-align: center;
 }
